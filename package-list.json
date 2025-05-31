@@ -94,8 +94,26 @@
             },
             "linux": {
                 "version": "25.2.3",
-                "install-script": "apt install libreoffice-*",
+                "install-script": "apt install libreoffice-* -y",
                 "uninstall-script": "apt purge libreoffice-*"
+            }
+        },
+        "dbeaver-ce": {
+            "name": "DBeaver Community",
+            "macos": {
+                "version": "25.0.5",
+                "install-script": "/usr/bin/curl -L 'https://dbeaver.io/files/dbeaver-ce-latest-macos-aarch64.dmg' -o /var/root/dbeaver-ce-latest-macos-aarch64.dmg && hdiutil attach /var/root/dbeaver-ce-latest-macos-aarch64.dmg -nobrowse -quiet && cp -r /Volumes/DBeaver\\ Community/DBeaver.app /Applications/ && hdiutil detach /Volumes/DBeaver\\ Community/ && rm /var/root/dbeaver-ce-latest-macos-aarch64.dmg",
+                "uninstall-script": "rm -rf /Applications/DBeaver.app"
+            },
+            "windows": {
+                "version": "23.0.0",
+                "install-script": "winget install dbeaver.dbeaver --accept-package-agreements --accept-source-agreements",
+                "uninstall-script": "winget uninstall dbeaver.dbeaver"
+            },
+            "linux": {
+                "version": "25.0.5",
+                "install-script": "/usr/bin/curl -L 'https://dbeaver.io/files/dbeaver-ce_latest_amd64.deb' -o /root/dbeaver-ce_latest_amd64.deb && apt install /root/dbeaver-ce_latest_amd64.deb -y",
+                "uninstall-script": "apt purge /root/dbeaver-ce_latest_amd64.deb"
             }
         }
     }
