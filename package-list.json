@@ -79,6 +79,24 @@
                 "install-script": "winget install Microsoft.Edge --accept-package-agreements --accept-source-agreements",
                 "uninstall-script": "winget uninstall Microsoft.Edge"
             }
+        },
+        "libreoffice": {
+            "name": "LibreOffice",
+            "macos": {
+                "version": "25.2.3",
+                "install-script": "/usr/bin/curl -L 'https://download.documentfoundation.org/libreoffice/stable/25.2.3/mac/x86_64/LibreOffice_25.2.3_MacOS_x86-64.dmg' -o /var/root/LibreOffice_25.2.3_MacOS_x86-64.dmg && hdiutil attach /var/root/LibreOffice_25.2.3_MacOS_x86-64.dmg -nobrowse -quiet && cp -r /Volumes/LibreOffice/LibreOffice.app /Applications/ && hdiutil detach /Volumes/LibreOffice/ && rm /var/root/LibreOffice_25.2.3_MacOS_x86-64.dmg",
+                "uninstall-script": "rm -rf /Applications/LibreOffice.app"
+            },
+            "windows": {
+                "version": "7.5.1.2",
+                "install-script": "winget install TheDocumentFoundation.LibreOffice --accept-package-agreements --accept-source-agreements",
+                "uninstall-script": "winget uninstall TheDocumentFoundation.LibreOffice"
+            },
+            "linux": {
+                "version": "25.2.3",
+                "install-script": "apt install libreoffice-*",
+                "uninstall-script": "apt purge libreoffice-*"
+            }
         }
     }
 }
