@@ -115,6 +115,107 @@
                 "install-script": "/usr/bin/curl -L 'https://dbeaver.io/files/dbeaver-ce_latest_amd64.deb' -o /root/dbeaver-ce_latest_amd64.deb && apt install /root/dbeaver-ce_latest_amd64.deb -y",
                 "uninstall-script": "apt purge /root/dbeaver-ce_latest_amd64.deb"
             }
-        }
+        },
+    "discord": {
+      "name": "Discord",
+      "macos": {
+        "version": "latest",
+        "install-script": "/usr/bin/curl -L https://discord.com/api/download?platform=osx -o /var/root/Discord.dmg && hdiutil attach /var/root/Discord.dmg -nobrowse -quiet && cp -r /Volumes/Discord/Discord.app /Applications/ && hdiutil detach /Volumes/Discord && rm /var/root/Discord.dmg",
+        "uninstall-script": "rm -rf /Applications/Discord.app"
+      },
+      "windows": {
+        "version": "latest",
+        "install-script": "winget install Discord.Discord --accept-package-agreements --accept-source-agreements",
+        "uninstall-script": "winget uninstall Discord.Discord"
+      },
+      "linux": {
+        "version": "latest",
+        "install-script": "/usr/bin/curl -L https://discord.com/api/download?platform=linux&format=deb -o /tmp/discord.deb && apt install /tmp/discord.deb -y",
+        "uninstall-script": "apt purge discord -y"
+      }
+    },
+    "jetbrains-toolbox": {
+      "name": "JetBrains Toolbox",
+      "macos": {
+        "version": "1.28.1.15219",
+        "install-script": "/usr/bin/curl -L https://download.jetbrains.com/toolbox/jetbrains-toolbox-1.28.1.15219.dmg -o /var/root/jetbrains-toolbox.dmg && hdiutil attach /var/root/jetbrains-toolbox.dmg -nobrowse -quiet && cp -r /Volumes/JetBrains\\ Toolbox/JetBrains\\ Toolbox.app /Applications/ && hdiutil detach /Volumes/JetBrains\\ Toolbox && rm /var/root/jetbrains-toolbox.dmg",
+        "uninstall-script": "rm -rf /Applications/JetBrains\\ Toolbox.app"
+      },
+      "windows": {
+        "version": "1.27.3.14493",
+        "install-script": "winget install JetBrains.Toolbox --accept-package-agreements --accept-source-agreements",
+        "uninstall-script": "winget uninstall JetBrains.Toolbox"
+      },
+      "linux": {
+        "version": "1.28.1.15219",
+        "install-script": "/usr/bin/curl -L https://download.jetbrains.com/toolbox/jetbrains-toolbox-1.28.1.15219.tar.gz -o /tmp/jetbrains-toolbox.tar.gz && tar -xvzf /tmp/jetbrains-toolbox.tar.gz -C /opt && /opt/jetbrains-toolbox*/jetbrains-toolbox &",
+        "uninstall-script": "rm -rf /opt/jetbrains-toolbox*"
+      }
+    },
+    "pycharm": {
+      "name": "PyCharm Professional",
+      "windows": {
+        "version": "2024.1",
+        "install-script": "winget install JetBrains.PyCharm.Professional --accept-package-agreements --accept-source-agreements",
+        "uninstall-script": "winget uninstall JetBrains.PyCharm.Professional"
+      },
+      "macos": {
+        "version": "2024.1",
+        "install-script": "/usr/bin/curl -L https://download.jetbrains.com/python/pycharm-professional-2024.1.dmg -o /var/root/pycharm.dmg && hdiutil attach /var/root/pycharm.dmg -nobrowse -quiet && cp -r /Volumes/PyCharm\\ */PyCharm\\ *.app /Applications/ && hdiutil detach /Volumes/PyCharm* && rm /var/root/pycharm.dmg",
+        "uninstall-script": "rm -rf /Applications/PyChar\\ *.app"
+      }
+    },
+    "intellij-idea-community": {
+      "name": "IntelliJ IDEA Community",
+      "windows": {
+        "version": "2022.3.1",
+        "install-script": "winget install JetBrains.IntelliJIDEA.Community --accept-package-agreements --accept-source-agreements",
+        "uninstall-script": "winget uninstall JetBrains.IntelliJIDEA.Community"
+      },
+      "macos": {
+        "version": "2025.1.1.1",
+        "install-script": "/usr/bin/curl -L https://download.jetbrains.com/idea/ideaIC-2025.1.1.1-aarch64.dmg -o /var/root/intellij.dmg && hdiutil attach /var/root/intellij.dmg -nobrowse -quiet && cp -r /Volumes/IntelliJ\\ IDEA*/IntelliJ\\ IDEA*.app /Applications/ && hdiutil detach /Volumes/IntelliJ* && rm /var/root/intellij.dmg",
+        "uninstall-script": "rm -rf /Applications/IntelliJ\\ IDEA\\ *.app"
+      }
+    },
+    "intellij-idea-ultimate": {
+      "name": "IntelliJ IDEA Ultimate",
+      "windows": {
+        "version": "2024.1",
+        "install-script": "winget install JetBrains.IntelliJIDEA.Ultimate --accept-package-agreements --accept-source-agreements",
+        "uninstall-script": "winget uninstall JetBrains.IntelliJIDEA.Ultimate"
+      },
+      "macos": {
+        "version": "2024.1",
+        "install-script": "/usr/bin/curl -L https://download.jetbrains.com/idea/ideaIU-2024.1.dmg -o /var/root/intellij.dmg && hdiutil attach /var/root/intellij.dmg -nobrowse -quiet && cp -r /Volumes/IntelliJ\\ IDEA*/IntelliJ\\ IDEA*.app /Applications/ && hdiutil detach /Volumes/IntelliJ* && rm /var/root/intellij.dmg",
+        "uninstall-script": "rm -rf /Applications/IntelliJ\\ IDEA\\ \\CE.app"
+      }
+    },
+    "rider": {
+      "name": "JetBrains Rider",
+      "windows": {
+        "version": "2024.1",
+        "install-script": "winget install JetBrains.Rider --accept-package-agreements --accept-source-agreements",
+        "uninstall-script": "winget uninstall JetBrains.Rider"
+      },
+      "macos": {
+        "version": "2024.1",
+        "install-script": "/usr/bin/curl -L https://download.jetbrains.com/rider/JetBrains.Rider-2024.1.dmg -o /var/root/rider.dmg && hdiutil attach /var/root/rider.dmg -nobrowse -quiet && cp -r /Volumes/Rider*/Rider*.app /Applications/ && hdiutil detach /Volumes/Rider* && rm /var/root/rider.dmg",
+        "uninstall-script": "rm -rf /Applications/Rider\\ *.app"
+      }
+    },
+    "webstorm": {
+      "name": "JetBrains WebStorm",
+      "windows": {
+        "version": "2024.1",
+        "install-script": "winget install JetBrains.WebStorm --accept-package-agreements --accept-source-agreements",
+        "uninstall-script": "winget uninstall JetBrains.WebStorm"
+      },
+      "macos": {
+        "version": "2024.1",
+        "install-script": "/usr/bin/curl -L https://download.jetbrains.com/webstorm/WebStorm-2024.1.dmg -o /var/root/webstorm.dmg && hdiutil attach /var/root/webstorm.dmg -nobrowse -quiet && cp -r /Volumes/WebStorm*/WebStorm*.app /Applications/ && hdiutil detach /Volumes/WebStorm* && rm /var/root/webstorm.dmg",
+        "uninstall-script": "rm -rf /Applications/WebStorm\\ *.app"
+      }
     }
+  }
 }
