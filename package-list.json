@@ -242,6 +242,27 @@
             "install-script":"/usr/bin/curl -L 'https://slack.com/api/desktop.latestRelease?arch=universal&variant=pkg&redirect=true' -o /var/root/slack-latest.pkg && /usr/sbin/installer -pkg /var/root/slack-latest.pkg -target / && rm /var/root/slack-latest.pkg",
             "uninstall-script":"pkgutil --forget com.tinyspeck.slackmacgap && rm -rf /Applications/Slack.app"
          }
+      },
+      "zoom":{
+         "name": "Zoom",
+         "windows":{
+            "version": "5.13.11835",
+            "install-script": "winget install Zoom.Zoom --accept-package-agreements --accept-source-agreements",
+            "uninstall-script": "winget uninstall Zoom.Zoom"
+         },
+         "macos":{
+            "version": "6.4.12",
+            "install-script": "/usr/bin/curl -L 'https://zoom.us/client/6.4.12.56699/zoomusInstallerFull.pkg?archType=arm64' -o /var/root/zoom.pkg && /usr/sbin/installer -pkg /var/root/zoom.pkg -target / && rm /var/root/zoom.pkg",
+            "uninstall-script": "rm -rf /Applications/zoom.us.app"
+         }
+      },
+      "awork": {
+         "name": "awork",
+         "macos":{
+            "version": "3.0.17",
+            "install-script": "/usr/bin/curl -L 'https://api.awork.com/api/v1/versions/electron/releases/download?platform=mac_arm64' -o /var/root/awork-3.0.17.dmg && hdiutil attach /var/root/awork-3.0.17.dmg -nobrowse -quiet && cp -r /Volumes/awork/awork.app /Applications/ && hdiutil detach /Volumes/awork/ && rm /var/root/awork-3.0.17.dmg", 
+            "uninstall-script": "rm -rf /Applications/awork.app"
+         }
       }
    }
 }
