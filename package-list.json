@@ -1,247 +1,247 @@
 {
-    "version": "2025.0.1-DEV",
-    "packages": {
-        "microsoft-office": {
-            "name": "Microsoft Office 356",
-            "macos": {
-                "version": "16.97.25051114",
-                "install-script": "/usr/bin/curl -L https://officecdnmac.microsoft.com/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/Microsoft_365_and_Office_16.97.25051114_Installer.pkg -o /var/root/Microsoft_365_and_Office_16.97.25051114_Installer.pkg && /usr/sbin/installer -pkg /var/root/Microsoft_365_and_Office_16.97.25051114_Installer.pkg -target / && rm /var/root/Microsoft_Outlook_16.97.25051114_Installer.pkg",
-                "uninstall-script": "rm -rf /Applications/Microsoft\\ Defender.app/ && rm -rf /Applications/Microsoft\\ Excel.app/ && rm -rf /Applications/Microsoft\\ OneNote.app/ && rm -rf /Applications/Microsoft\\ Outlook.app/ && rm -rf /Applications/Microsoft\\ PowerPoint.app/ && rm -rf /Applications/Microsoft\\ Word.app/"
-            },
-            "windows": {
-                "version": "16.0.16130.20218",
-                "install-script": "winget install Microsoft.Office --accept-package-agreements --accept-source-agreements",
-                "uninstall-script": "winget uninstall Microsoft.Office"
-            }
-        },
-        "microsoft-outlook": {
-            "name": "Microsoft Outlook",
-            "macos": {
-                "version": "16.97.25051114",
-                "install-script": "/usr/bin/curl -L https://officecdnmac.microsoft.com/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/Microsoft_Outlook_16.97.25051114_Installer.pkg -o /var/root/Microsoft_Outlook_16.97.25051114_Installer.pkg && /usr/sbin/installer -pkg /var/root/Microsoft_Outlook_16.97.25051114_Installer.pkg -target / && rm /var/root/Microsoft_Outlook_16.97.25051114_Installer.pkg",
-                "uninstall-script": "pkgutil --forget com.microsoft.package.Microsoft_Outlook.app && rm -rf /Applications/Microsoft\\ Outlook.app/"
-            },
-            "windows": {
-                "version": "",
-                "install-script": "winget install 9NRX63209R7B --accept-package-agreements --accept-source-agreements",
-                "uninstall-script": "winget uninstall 9NRX63209R7B"
-            }
-        },
-        "microsoft-word": {
-            "name": "Microsoft Word",
-            "macos": {
-                "version": "16.97.25051114",
-                "install-script": "/usr/bin/curl -L https://officecdnmac.microsoft.com/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/Microsoft_Word_16.97.25051114_Installer.pkg -o /var/root/Microsoft_Word_16.97.25051114_Installer.pkg && /usr/sbin/installer -pkg /var/root/Microsoft_Word_16.97.25051114_Installer.pkg -target / && rm /var/root/Microsoft_Word_16.97.25051114_Installer.pkg",
-                "uninstall-script": "pkgutil --forget com.microsoft.package.Microsoft_Word.app && rm -rf /Applications/Microsoft\\ Word.app/"
-            }
-        },
-        "microsoft-powerpoint": {
-            "name": "Microsoft PowerPoint",
-            "macos": {
-                "version": "16.97.25051114",
-                "install-script": "/usr/bin/curl -L https://officecdnmac.microsoft.com/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/Microsoft_PowerPoint_16.97.25051114_Installer.pkg -o /var/root/Microsoft_PowerPoint_16.97.25051114_Installer.pkg && /usr/sbin/installer -pkg /var/root/Microsoft_PowerPoint_16.97.25051114_Installer.pkg -target / && rm /var/root/Microsoft_PowerPoint_16.97.25051114_Installer.pkg",
-                "uninstall-script": "pkgutil --forget com.microsoft.package.Microsoft_PowerPoint.app && rm -rf /Applications/Microsoft\\ PowerPoint.app/"
-            }
-        },
-        "microsoft-excel": {
-            "name": "Microsoft Excel",
-            "macos": {
-                "version": "16.97.25051114",
-                "install-script": "/usr/bin/curl -L https://officecdnmac.microsoft.com/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/Microsoft_Excel_16.97.25051114_Installer.pkg -o /var/root/Microsoft_Excel_16.97.25051114_Installer.pkg && /usr/sbin/installer -pkg /var/root/Microsoft_Excel_16.97.25051114_Installer.pkg -target / && rm /var/root/Microsoft_Excel_16.97.25051114_Installer.pkg",
-                "uninstall-script": "pkgutil --forget com.microsoft.package.Microsoft_Excel.app && rm -rf /Applications/Microsoft\\ Excel.app/"
-            }
-        },
-        "microsoft-onenote": {
-            "name": "Microsoft OneNote",
-            "macos": {
-                "version": "16.97.25051114",
-                "install-script": "/usr/bin/curl -L https://officecdnmac.microsoft.com/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/Microsoft_OneNote_16.97.25051114_Updater.pkg -o /var/root/Microsoft_OneNote_16.97.25051114_Updater.pkg && /usr/sbin/installer -pkg /var/root/Microsoft_OneNote_16.97.25051114_Updater.pkg -target / && rm /var/root/Microsoft_OneNote_16.97.25051114_Updater.pkg",
-                "uninstall-script": "pkgutil --forget com.microsoft.package.Microsoft_OneNote.app && rm -rf /Applications/Microsoft\\ OneNote.app/"
-            }
-        },
-        "microsoft-onedrive": {
-            "name": "Microsoft OneDrive",
-            "macos": {
-                "version": "22.131.0619.0001",
-                "install-script": "winget install Microsoft.OneDrive --accept-package-agreements --accept-source-agreements",
-                "uninstall-script": "winget uninstall Microsoft.OneDrive"
-            }
-        },
-        "microsoft-edge": {
-            "name": "Microsoft Edge",
-            "macos": {
-                "version": "137.0.3296.52",
-                "install-script": "/usr/bin/curl -L 'https://go.microsoft.com/fwlink/?linkid=2192091&platform=Mac&Consent=0&channel=Stable&brand=M101&_.%%E2%80%8B' -o /var/root/MicrosoftEdge-137.0.3296.52.dmg && hdiutil attach /var/root/MicrosoftEdge-137.0.3296.52.dmg -nobrowse -quiet && cp -r /Volumes/Microsoft\\ Edge/Microsoft\\ Edge.app /Applications/ && hdiutil detach /Volumes/Microsoft\\ Edge/ && rm /var/root/MicrosoftEdge-137.0.3296.52.dmg",
-                "uninstall-script": "rm -rf /Applications/Microsoft\\ Edge.app/"
-            },
-            "windows": {
-                "version": "111.0.1661.43",
-                "install-script": "winget install Microsoft.Edge --accept-package-agreements --accept-source-agreements",
-                "uninstall-script": "winget uninstall Microsoft.Edge"
-            }
-        },
-        "libreoffice": {
-            "name": "LibreOffice",
-            "macos": {
-                "version": "25.2.3",
-                "install-script": "/usr/bin/curl -L 'https://download.documentfoundation.org/libreoffice/stable/25.2.3/mac/x86_64/LibreOffice_25.2.3_MacOS_x86-64.dmg' -o /var/root/LibreOffice_25.2.3_MacOS_x86-64.dmg && hdiutil attach /var/root/LibreOffice_25.2.3_MacOS_x86-64.dmg -nobrowse -quiet && cp -r /Volumes/LibreOffice/LibreOffice.app /Applications/ && hdiutil detach /Volumes/LibreOffice/ && rm /var/root/LibreOffice_25.2.3_MacOS_x86-64.dmg",
-                "uninstall-script": "rm -rf /Applications/LibreOffice.app"
-            },
-            "windows": {
-                "version": "7.5.1.2",
-                "install-script": "winget install TheDocumentFoundation.LibreOffice --accept-package-agreements --accept-source-agreements",
-                "uninstall-script": "winget uninstall TheDocumentFoundation.LibreOffice"
-            },
-            "linux": {
-                "version": "25.2.3",
-                "install-script": "apt install libreoffice-* -y",
-                "uninstall-script": "apt purge libreoffice-*"
-            }
-        },
-        "dbeaver-ce": {
-            "name": "DBeaver Community",
-            "macos": {
-                "version": "25.0.5",
-                "install-script": "/usr/bin/curl -L 'https://dbeaver.io/files/dbeaver-ce-latest-macos-aarch64.dmg' -o /var/root/dbeaver-ce-latest-macos-aarch64.dmg && hdiutil attach /var/root/dbeaver-ce-latest-macos-aarch64.dmg -nobrowse -quiet && cp -r /Volumes/DBeaver\\ Community/DBeaver.app /Applications/ && hdiutil detach /Volumes/DBeaver\\ Community/ && rm /var/root/dbeaver-ce-latest-macos-aarch64.dmg",
-                "uninstall-script": "rm -rf /Applications/DBeaver.app"
-            },
-            "windows": {
-                "version": "23.0.0",
-                "install-script": "winget install dbeaver.dbeaver --accept-package-agreements --accept-source-agreements",
-                "uninstall-script": "winget uninstall dbeaver.dbeaver"
-            },
-            "linux": {
-                "version": "25.0.5",
-                "install-script": "/usr/bin/curl -L 'https://dbeaver.io/files/dbeaver-ce_latest_amd64.deb' -o /root/dbeaver-ce_latest_amd64.deb && apt install /root/dbeaver-ce_latest_amd64.deb -y",
-                "uninstall-script": "apt purge /root/dbeaver-ce_latest_amd64.deb"
-            }
-        },
-    "discord": {
-      "name": "Discord",
-      "macos": {
-        "version": "latest",
-        "install-script": "/usr/bin/curl -L https://discord.com/api/download?platform=osx -o /var/root/Discord.dmg && hdiutil attach /var/root/Discord.dmg -nobrowse -quiet && cp -r /Volumes/Discord/Discord.app /Applications/ && hdiutil detach /Volumes/Discord && rm /var/root/Discord.dmg",
-        "uninstall-script": "rm -rf /Applications/Discord.app"
+   "version":"2025.0.1-DEV",
+   "packages":{
+      "microsoft-office":{
+         "name":"Microsoft Office 356",
+         "macos":{
+            "version":"16.97.25051114",
+            "install-script":"/usr/bin/curl -L https://officecdnmac.microsoft.com/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/Microsoft_365_and_Office_16.97.25051114_Installer.pkg -o /var/root/Microsoft_365_and_Office_16.97.25051114_Installer.pkg && /usr/sbin/installer -pkg /var/root/Microsoft_365_and_Office_16.97.25051114_Installer.pkg -target / && rm /var/root/Microsoft_Outlook_16.97.25051114_Installer.pkg",
+            "uninstall-script":"rm -rf /Applications/Microsoft\\ Defender.app/ && rm -rf /Applications/Microsoft\\ Excel.app/ && rm -rf /Applications/Microsoft\\ OneNote.app/ && rm -rf /Applications/Microsoft\\ Outlook.app/ && rm -rf /Applications/Microsoft\\ PowerPoint.app/ && rm -rf /Applications/Microsoft\\ Word.app/"
+         },
+         "windows":{
+            "version":"16.0.16130.20218",
+            "install-script":"winget install Microsoft.Office --accept-package-agreements --accept-source-agreements",
+            "uninstall-script":"winget uninstall Microsoft.Office"
+         }
       },
-      "windows": {
-        "version": "latest",
-        "install-script": "winget install Discord.Discord --accept-package-agreements --accept-source-agreements",
-        "uninstall-script": "winget uninstall Discord.Discord"
+      "microsoft-outlook":{
+         "name":"Microsoft Outlook",
+         "macos":{
+            "version":"16.97.25051114",
+            "install-script":"/usr/bin/curl -L https://officecdnmac.microsoft.com/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/Microsoft_Outlook_16.97.25051114_Installer.pkg -o /var/root/Microsoft_Outlook_16.97.25051114_Installer.pkg && /usr/sbin/installer -pkg /var/root/Microsoft_Outlook_16.97.25051114_Installer.pkg -target / && rm /var/root/Microsoft_Outlook_16.97.25051114_Installer.pkg",
+            "uninstall-script":"pkgutil --forget com.microsoft.package.Microsoft_Outlook.app && rm -rf /Applications/Microsoft\\ Outlook.app/"
+         },
+         "windows":{
+            "version":"",
+            "install-script":"winget install 9NRX63209R7B --accept-package-agreements --accept-source-agreements",
+            "uninstall-script":"winget uninstall 9NRX63209R7B"
+         }
       },
-      "linux": {
-        "version": "latest",
-        "install-script": "/usr/bin/curl -L https://discord.com/api/download?platform=linux&format=deb -o /tmp/discord.deb && apt install /tmp/discord.deb -y",
-        "uninstall-script": "apt purge discord -y"
+      "microsoft-word":{
+         "name":"Microsoft Word",
+         "macos":{
+            "version":"16.97.25051114",
+            "install-script":"/usr/bin/curl -L https://officecdnmac.microsoft.com/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/Microsoft_Word_16.97.25051114_Installer.pkg -o /var/root/Microsoft_Word_16.97.25051114_Installer.pkg && /usr/sbin/installer -pkg /var/root/Microsoft_Word_16.97.25051114_Installer.pkg -target / && rm /var/root/Microsoft_Word_16.97.25051114_Installer.pkg",
+            "uninstall-script":"pkgutil --forget com.microsoft.package.Microsoft_Word.app && rm -rf /Applications/Microsoft\\ Word.app/"
+         }
+      },
+      "microsoft-powerpoint":{
+         "name":"Microsoft PowerPoint",
+         "macos":{
+            "version":"16.97.25051114",
+            "install-script":"/usr/bin/curl -L https://officecdnmac.microsoft.com/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/Microsoft_PowerPoint_16.97.25051114_Installer.pkg -o /var/root/Microsoft_PowerPoint_16.97.25051114_Installer.pkg && /usr/sbin/installer -pkg /var/root/Microsoft_PowerPoint_16.97.25051114_Installer.pkg -target / && rm /var/root/Microsoft_PowerPoint_16.97.25051114_Installer.pkg",
+            "uninstall-script":"pkgutil --forget com.microsoft.package.Microsoft_PowerPoint.app && rm -rf /Applications/Microsoft\\ PowerPoint.app/"
+         }
+      },
+      "microsoft-excel":{
+         "name":"Microsoft Excel",
+         "macos":{
+            "version":"16.97.25051114",
+            "install-script":"/usr/bin/curl -L https://officecdnmac.microsoft.com/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/Microsoft_Excel_16.97.25051114_Installer.pkg -o /var/root/Microsoft_Excel_16.97.25051114_Installer.pkg && /usr/sbin/installer -pkg /var/root/Microsoft_Excel_16.97.25051114_Installer.pkg -target / && rm /var/root/Microsoft_Excel_16.97.25051114_Installer.pkg",
+            "uninstall-script":"pkgutil --forget com.microsoft.package.Microsoft_Excel.app && rm -rf /Applications/Microsoft\\ Excel.app/"
+         }
+      },
+      "microsoft-onenote":{
+         "name":"Microsoft OneNote",
+         "macos":{
+            "version":"16.97.25051114",
+            "install-script":"/usr/bin/curl -L https://officecdnmac.microsoft.com/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/Microsoft_OneNote_16.97.25051114_Updater.pkg -o /var/root/Microsoft_OneNote_16.97.25051114_Updater.pkg && /usr/sbin/installer -pkg /var/root/Microsoft_OneNote_16.97.25051114_Updater.pkg -target / && rm /var/root/Microsoft_OneNote_16.97.25051114_Updater.pkg",
+            "uninstall-script":"pkgutil --forget com.microsoft.package.Microsoft_OneNote.app && rm -rf /Applications/Microsoft\\ OneNote.app/"
+         }
+      },
+      "microsoft-onedrive":{
+         "name":"Microsoft OneDrive",
+         "macos":{
+            "version":"22.131.0619.0001",
+            "install-script":"winget install Microsoft.OneDrive --accept-package-agreements --accept-source-agreements",
+            "uninstall-script":"winget uninstall Microsoft.OneDrive"
+         }
+      },
+      "microsoft-edge":{
+         "name":"Microsoft Edge",
+         "macos":{
+            "version":"137.0.3296.52",
+            "install-script":"/usr/bin/curl -L 'https://go.microsoft.com/fwlink/?linkid=2192091&platform=Mac&Consent=0&channel=Stable&brand=M101&_.%%E2%80%8B' -o /var/root/MicrosoftEdge-137.0.3296.52.dmg && hdiutil attach /var/root/MicrosoftEdge-137.0.3296.52.dmg -nobrowse -quiet && cp -r /Volumes/Microsoft\\ Edge/Microsoft\\ Edge.app /Applications/ && hdiutil detach /Volumes/Microsoft\\ Edge/ && rm /var/root/MicrosoftEdge-137.0.3296.52.dmg",
+            "uninstall-script":"rm -rf /Applications/Microsoft\\ Edge.app/"
+         },
+         "windows":{
+            "version":"111.0.1661.43",
+            "install-script":"winget install Microsoft.Edge --accept-package-agreements --accept-source-agreements",
+            "uninstall-script":"winget uninstall Microsoft.Edge"
+         }
+      },
+      "libreoffice":{
+         "name":"LibreOffice",
+         "macos":{
+            "version":"25.2.3",
+            "install-script":"/usr/bin/curl -L 'https://download.documentfoundation.org/libreoffice/stable/25.2.3/mac/x86_64/LibreOffice_25.2.3_MacOS_x86-64.dmg' -o /var/root/LibreOffice_25.2.3_MacOS_x86-64.dmg && hdiutil attach /var/root/LibreOffice_25.2.3_MacOS_x86-64.dmg -nobrowse -quiet && cp -r /Volumes/LibreOffice/LibreOffice.app /Applications/ && hdiutil detach /Volumes/LibreOffice/ && rm /var/root/LibreOffice_25.2.3_MacOS_x86-64.dmg",
+            "uninstall-script":"rm -rf /Applications/LibreOffice.app"
+         },
+         "windows":{
+            "version":"7.5.1.2",
+            "install-script":"winget install TheDocumentFoundation.LibreOffice --accept-package-agreements --accept-source-agreements",
+            "uninstall-script":"winget uninstall TheDocumentFoundation.LibreOffice"
+         },
+         "linux":{
+            "version":"25.2.3",
+            "install-script":"apt install libreoffice-* -y",
+            "uninstall-script":"apt purge libreoffice-*"
+         }
+      },
+      "dbeaver-ce":{
+         "name":"DBeaver Community",
+         "macos":{
+            "version":"25.0.5",
+            "install-script":"/usr/bin/curl -L 'https://dbeaver.io/files/dbeaver-ce-latest-macos-aarch64.dmg' -o /var/root/dbeaver-ce-latest-macos-aarch64.dmg && hdiutil attach /var/root/dbeaver-ce-latest-macos-aarch64.dmg -nobrowse -quiet && cp -r /Volumes/DBeaver\\ Community/DBeaver.app /Applications/ && hdiutil detach /Volumes/DBeaver\\ Community/ && rm /var/root/dbeaver-ce-latest-macos-aarch64.dmg",
+            "uninstall-script":"rm -rf /Applications/DBeaver.app"
+         },
+         "windows":{
+            "version":"23.0.0",
+            "install-script":"winget install dbeaver.dbeaver --accept-package-agreements --accept-source-agreements",
+            "uninstall-script":"winget uninstall dbeaver.dbeaver"
+         },
+         "linux":{
+            "version":"25.0.5",
+            "install-script":"/usr/bin/curl -L 'https://dbeaver.io/files/dbeaver-ce_latest_amd64.deb' -o /root/dbeaver-ce_latest_amd64.deb && apt install /root/dbeaver-ce_latest_amd64.deb -y",
+            "uninstall-script":"apt purge /root/dbeaver-ce_latest_amd64.deb"
+         }
+      },
+      "discord":{
+         "name":"Discord",
+         "macos":{
+            "version":"latest",
+            "install-script":"/usr/bin/curl -L https://discord.com/api/download?platform=osx -o /var/root/Discord.dmg && hdiutil attach /var/root/Discord.dmg -nobrowse -quiet && cp -r /Volumes/Discord/Discord.app /Applications/ && hdiutil detach /Volumes/Discord && rm /var/root/Discord.dmg",
+            "uninstall-script":"rm -rf /Applications/Discord.app"
+         },
+         "windows":{
+            "version":"latest",
+            "install-script":"winget install Discord.Discord --accept-package-agreements --accept-source-agreements",
+            "uninstall-script":"winget uninstall Discord.Discord"
+         },
+         "linux":{
+            "version":"latest",
+            "install-script":"/usr/bin/curl -L https://discord.com/api/download?platform=linux&format=deb -o /tmp/discord.deb && apt install /tmp/discord.deb -y",
+            "uninstall-script":"apt purge discord -y"
+         }
+      },
+      "jetbrains-toolbox":{
+         "name":"JetBrains Toolbox",
+         "macos":{
+            "version":"1.28.1.15219",
+            "install-script":"/usr/bin/curl -L https://download.jetbrains.com/toolbox/jetbrains-toolbox-1.28.1.15219.dmg -o /var/root/jetbrains-toolbox.dmg && hdiutil attach /var/root/jetbrains-toolbox.dmg -nobrowse -quiet && cp -r /Volumes/JetBrains\\ Toolbox/JetBrains\\ Toolbox.app /Applications/ && hdiutil detach /Volumes/JetBrains\\ Toolbox && rm /var/root/jetbrains-toolbox.dmg",
+            "uninstall-script":"rm -rf /Applications/JetBrains\\ Toolbox.app"
+         },
+         "windows":{
+            "version":"1.27.3.14493",
+            "install-script":"winget install JetBrains.Toolbox --accept-package-agreements --accept-source-agreements",
+            "uninstall-script":"winget uninstall JetBrains.Toolbox"
+         },
+         "linux":{
+            "version":"1.28.1.15219",
+            "install-script":"/usr/bin/curl -L https://download.jetbrains.com/toolbox/jetbrains-toolbox-1.28.1.15219.tar.gz -o /tmp/jetbrains-toolbox.tar.gz && tar -xvzf /tmp/jetbrains-toolbox.tar.gz -C /opt && /opt/jetbrains-toolbox*/jetbrains-toolbox &",
+            "uninstall-script":"rm -rf /opt/jetbrains-toolbox*"
+         }
+      },
+      "pycharm":{
+         "name":"PyCharm Professional",
+         "windows":{
+            "version":"2024.1",
+            "install-script":"winget install JetBrains.PyCharm.Professional --accept-package-agreements --accept-source-agreements",
+            "uninstall-script":"winget uninstall JetBrains.PyCharm.Professional"
+         },
+         "macos":{
+            "version":"2024.1",
+            "install-script":"/usr/bin/curl -L https://download.jetbrains.com/python/pycharm-professional-2024.1.dmg -o /var/root/pycharm.dmg && hdiutil attach /var/root/pycharm.dmg -nobrowse -quiet && cp -r /Volumes/PyCharm\\ */PyCharm\\ *.app /Applications/ && hdiutil detach /Volumes/PyCharm* && rm /var/root/pycharm.dmg",
+            "uninstall-script":"rm -rf /Applications/PyChar\\ *.app"
+         }
+      },
+      "intellij-idea-community":{
+         "name":"IntelliJ IDEA Community",
+         "windows":{
+            "version":"2024.1",
+            "install-script":"winget install JetBrains.IntelliJIDEA.Community --accept-package-agreements --accept-source-agreements",
+            "uninstall-script":"winget uninstall JetBrains.IntelliJIDEA.Community"
+         },
+         "macos":{
+            "version":"2025.1.1.1",
+            "install-script":"/usr/bin/curl -L https://download.jetbrains.com/idea/ideaIC-2025.1.1.1-aarch64.dmg -o /var/root/intellij-ce.dmg && hdiutil attach /var/root/intellij-ce.dmg -nobrowse -quiet && cp -r /Volumes/IntelliJ\\ IDEA*/IntelliJ\\ IDEA*.app /Applications/ && hdiutil detach /Volumes/IntelliJ \\IDEA \\CE && rm /var/root/intellij-ce.dmg",
+            "uninstall-script":"rm -rf /Applications/IntelliJ\\ IDEA\\ CE.app"
+         }
+      },
+      "intellij-idea-ultimate":{
+         "name":"IntelliJ IDEA Ultimate",
+         "windows":{
+            "version":"2024.1",
+            "install-script":"winget install JetBrains.IntelliJIDEA.Ultimate --accept-package-agreements --accept-source-agreements",
+            "uninstall-script":"winget uninstall JetBrains.IntelliJIDEA.Ultimate"
+         },
+         "macos":{
+            "version":"2024.1",
+            "install-script":"/usr/bin/curl -L https://download.jetbrains.com/idea/ideaIU-2024.1.dmg -o /var/root/intellij.dmg && hdiutil attach /var/root/intellij.dmg -nobrowse -quiet && cp -r /Volumes/IntelliJ\\ IDEA*/IntelliJ\\ IDEA*.app /Applications/ && hdiutil detach /Volumes/IntelliJ* && rm /var/root/intellij.dmg",
+            "uninstall-script":"rm -rf /Applications/IntelliJ\\ IDEA\\ *.app"
+         }
+      },
+      "rider":{
+         "name":"JetBrains Rider",
+         "windows":{
+            "version":"2024.1",
+            "install-script":"winget install JetBrains.Rider --accept-package-agreements --accept-source-agreements",
+            "uninstall-script":"winget uninstall JetBrains.Rider"
+         },
+         "macos":{
+            "version":"2024.1",
+            "install-script":"/usr/bin/curl -L https://download.jetbrains.com/rider/JetBrains.Rider-2024.1.dmg -o /var/root/rider.dmg && hdiutil attach /var/root/rider.dmg -nobrowse -quiet && cp -r /Volumes/Rider*/Rider*.app /Applications/ && hdiutil detach /Volumes/Rider* && rm /var/root/rider.dmg",
+            "uninstall-script":"rm -rf /Applications/Rider\\ *.app"
+         }
+      },
+      "webstorm":{
+         "name":"JetBrains WebStorm",
+         "windows":{
+            "version":"2022.3.2",
+            "install-script":"winget install JetBrains.WebStorm --accept-package-agreements --accept-source-agreements",
+            "uninstall-script":"winget uninstall JetBrains.WebStorm"
+         },
+         "macos":{
+            "version":"2025.1.1",
+            "install-script":"/usr/bin/curl -L https://download.jetbrains.com/webstorm/WebStorm-2025.1.1-aarch64.dmg -o /var/root/webstorm.dmg && hdiutil attach /var/root/webstorm.dmg -nobrowse -quiet && cp -r /Volumes/WebStorm*/WebStorm*.app /Applications/ && hdiutil detach /Volumes/WebStorm* && rm /var/root/webstorm.dmg",
+            "uninstall-script":"rm -rf /Applications/WebStorm\\ *.app"
+         }
+      },
+      "phpstorm":{
+         "name":"JetBrains PhpStorm",
+         "windows":{
+            "version":"2024.1",
+            "install-script":"winget install JetBrains.PHPStorm --accept-package-agreements --accept-source-agreements",
+            "uninstall-script":"winget uninstall JetBrains.PHPStorm"
+         },
+         "macos":{
+            "version":"2024.1",
+            "install-script":"/usr/bin/curl -L https://download.jetbrains.com/webide/PhpStorm-2025.1.1-aarch64.dmg -o /var/root/phpstorm.dmg && hdiutil attach /var/root/phpstorm.dmg -nobrowse -quiet && cp -r /Volumes/PhpStorm/PhpStorm.app /Applications/ && hdiutil detach /Volumes/PhpStorm && rm /var/root/phpstorm.dmg",
+            "uninstall-script":"rm -rf /Applications/PhpStorm.app"
+         }
+      },
+      "slack":{
+         "name":"Slack",
+         "windows":{
+            "version":"4.28.184",
+            "install-script":"winget install SlackTechnologies.Slack --accept-package-agreements --accept-source-agreements",
+            "uninstall-script":"winget uninstall SlackTechnologies.Slack"
+         },
+         "macos":{
+            "version":"latest",
+            "install-script":"/usr/bin/curl -L 'https://slack.com/api/desktop.latestRelease?arch=universal&variant=pkg&redirect=true' -o /var/root/slack-latest.pkg && /usr/sbin/installer -pkg /var/root/slack-latest.pkg -target / && rm /var/root/slack-latest.pkg",
+            "uninstall-script":"pkgutil --forget com.tinyspeck.slackmacgap && rm -rf /Applications/Slack.app"
+         }
       }
-    },
-    "jetbrains-toolbox": {
-      "name": "JetBrains Toolbox",
-      "macos": {
-        "version": "1.28.1.15219",
-        "install-script": "/usr/bin/curl -L https://download.jetbrains.com/toolbox/jetbrains-toolbox-1.28.1.15219.dmg -o /var/root/jetbrains-toolbox.dmg && hdiutil attach /var/root/jetbrains-toolbox.dmg -nobrowse -quiet && cp -r /Volumes/JetBrains\\ Toolbox/JetBrains\\ Toolbox.app /Applications/ && hdiutil detach /Volumes/JetBrains\\ Toolbox && rm /var/root/jetbrains-toolbox.dmg",
-        "uninstall-script": "rm -rf /Applications/JetBrains\\ Toolbox.app"
-      },
-      "windows": {
-        "version": "1.27.3.14493",
-        "install-script": "winget install JetBrains.Toolbox --accept-package-agreements --accept-source-agreements",
-        "uninstall-script": "winget uninstall JetBrains.Toolbox"
-      },
-      "linux": {
-        "version": "1.28.1.15219",
-        "install-script": "/usr/bin/curl -L https://download.jetbrains.com/toolbox/jetbrains-toolbox-1.28.1.15219.tar.gz -o /tmp/jetbrains-toolbox.tar.gz && tar -xvzf /tmp/jetbrains-toolbox.tar.gz -C /opt && /opt/jetbrains-toolbox*/jetbrains-toolbox &",
-        "uninstall-script": "rm -rf /opt/jetbrains-toolbox*"
-      }
-    },
-    "pycharm": {
-      "name": "PyCharm Professional",
-      "windows": {
-        "version": "2024.1",
-        "install-script": "winget install JetBrains.PyCharm.Professional --accept-package-agreements --accept-source-agreements",
-        "uninstall-script": "winget uninstall JetBrains.PyCharm.Professional"
-      },
-      "macos": {
-        "version": "2024.1",
-        "install-script": "/usr/bin/curl -L https://download.jetbrains.com/python/pycharm-professional-2024.1.dmg -o /var/root/pycharm.dmg && hdiutil attach /var/root/pycharm.dmg -nobrowse -quiet && cp -r /Volumes/PyCharm\\ */PyCharm\\ *.app /Applications/ && hdiutil detach /Volumes/PyCharm* && rm /var/root/pycharm.dmg",
-        "uninstall-script": "rm -rf /Applications/PyChar\\ *.app"
-      }
-    },
-    "intellij-idea-community": {
-      "name": "IntelliJ IDEA Community",
-      "windows": {
-        "version": "2024.1",
-        "install-script": "winget install JetBrains.IntelliJIDEA.Community --accept-package-agreements --accept-source-agreements",
-        "uninstall-script": "winget uninstall JetBrains.IntelliJIDEA.Community"
-      },
-      "macos": {
-        "version": "2025.1.1.1",
-        "install-script": "/usr/bin/curl -L https://download.jetbrains.com/idea/ideaIC-2025.1.1.1-aarch64.dmg -o /var/root/intellij-ce.dmg && hdiutil attach /var/root/intellij-ce.dmg -nobrowse -quiet && cp -r /Volumes/IntelliJ\\ IDEA*/IntelliJ\\ IDEA*.app /Applications/ && hdiutil detach /Volumes/IntelliJ \\IDEA \\CE && rm /var/root/intellij-ce.dmg",
-        "uninstall-script": "rm -rf /Applications/IntelliJ\\ IDEA\\ CE.app"
-      }
-    },
-    "intellij-idea-ultimate": {
-      "name": "IntelliJ IDEA Ultimate",
-      "windows": {
-        "version": "2024.1",
-        "install-script": "winget install JetBrains.IntelliJIDEA.Ultimate --accept-package-agreements --accept-source-agreements",
-        "uninstall-script": "winget uninstall JetBrains.IntelliJIDEA.Ultimate"
-      },
-      "macos": {
-        "version": "2024.1",
-        "install-script": "/usr/bin/curl -L https://download.jetbrains.com/idea/ideaIU-2024.1.dmg -o /var/root/intellij.dmg && hdiutil attach /var/root/intellij.dmg -nobrowse -quiet && cp -r /Volumes/IntelliJ\\ IDEA*/IntelliJ\\ IDEA*.app /Applications/ && hdiutil detach /Volumes/IntelliJ* && rm /var/root/intellij.dmg",
-        "uninstall-script": "rm -rf /Applications/IntelliJ\\ IDEA\\ *.app"
-      }
-    },
-    "rider": {
-      "name": "JetBrains Rider",
-      "windows": {
-        "version": "2024.1",
-        "install-script": "winget install JetBrains.Rider --accept-package-agreements --accept-source-agreements",
-        "uninstall-script": "winget uninstall JetBrains.Rider"
-      },
-      "macos": {
-        "version": "2024.1",
-        "install-script": "/usr/bin/curl -L https://download.jetbrains.com/rider/JetBrains.Rider-2024.1.dmg -o /var/root/rider.dmg && hdiutil attach /var/root/rider.dmg -nobrowse -quiet && cp -r /Volumes/Rider*/Rider*.app /Applications/ && hdiutil detach /Volumes/Rider* && rm /var/root/rider.dmg",
-        "uninstall-script": "rm -rf /Applications/Rider\\ *.app"
-      }
-    },
-    "webstorm": {
-      "name": "JetBrains WebStorm",
-      "windows": {
-        "version": "2022.3.2",
-        "install-script": "winget install JetBrains.WebStorm --accept-package-agreements --accept-source-agreements",
-        "uninstall-script": "winget uninstall JetBrains.WebStorm"
-      },
-      "macos": {
-        "version": "2025.1.1",
-        "install-script": "/usr/bin/curl -L https://download.jetbrains.com/webstorm/WebStorm-2025.1.1-aarch64.dmg -o /var/root/webstorm.dmg && hdiutil attach /var/root/webstorm.dmg -nobrowse -quiet && cp -r /Volumes/WebStorm*/WebStorm*.app /Applications/ && hdiutil detach /Volumes/WebStorm* && rm /var/root/webstorm.dmg",
-        "uninstall-script": "rm -rf /Applications/WebStorm\\ *.app"
-      }
-    },
-    "phpstorm": {
-      "name": "JetBrains PhpStorm",
-      "windows": {
-        "version": "2024.1",
-        "install-script": "winget install JetBrains.PHPStorm --accept-package-agreements --accept-source-agreements",
-        "uninstall-script": "winget uninstall JetBrains.PHPStorm"
-      },
-      "macos": {
-        "version": "2024.1",
-        "install-script": "/usr/bin/curl -L https://download.jetbrains.com/webide/PhpStorm-2025.1.1-aarch64.dmg -o /var/root/phpstorm.dmg && hdiutil attach /var/root/phpstorm.dmg -nobrowse -quiet && cp -r /Volumes/PhpStorm/PhpStorm.app /Applications/ && hdiutil detach /Volumes/PhpStorm && rm /var/root/phpstorm.dmg",
-        "uninstall-script": "rm -rf /Applications/PhpStorm.app"
-      }
-    },
-    "slack": {
-      "name": "Slack",
-      "windows": {
-        "version": "4.28.184",
-        "install-script": "winget install SlackTechnologies.Slack --accept-package-agreements --accept-source-agreements",
-        "uninstall-script": "winget uninstall SlackTechnologies.Slack"
-      },
-      "macos": {
-        "version": "latest",
-        "install-script": "/usr/bin/curl -L 'https://slack.com/api/desktop.latestRelease?arch=universal&variant=pkg&redirect=true' -o /var/root/slack-latest.pkg && /usr/sbin/installer -pkg /var/root/slack-latest.pkg -target / && rm /var/root/slack-latest.pkg",
-        "uninstall-script": "pkgutil --forget com.tinyspeck.slackmacgap && rm -rf /Applications/Slack.app"
-      }
-    }
-  }
+   }
 }
