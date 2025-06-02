@@ -263,6 +263,45 @@
             "install-script": "/usr/bin/curl -L 'https://api.awork.com/api/v1/versions/electron/releases/download?platform=mac_arm64' -o /var/root/awork-3.0.17.dmg && hdiutil attach /var/root/awork-3.0.17.dmg -nobrowse -quiet && cp -r /Volumes/awork/awork.app /Applications/ && hdiutil detach /Volumes/awork/ && rm /var/root/awork-3.0.17.dmg", 
             "uninstall-script": "rm -rf /Applications/awork.app"
          }
+      },
+      "asana": {
+         "name": "Asana",
+         "macos":{
+            "version": "latest",
+            "install-script":"/usr/bin/curl -L 'https://desktop-downloads.asana.com/darwin_universal/prod/latest/Asana.dmg' -o /var/root/Asana.dmg && hdiutil attach /var/root/Asana.dmg -nobrowse -quiet && cp -r /Volumes/Asana/Asana.app /Applications/ && hdiutil detach /Volumes/Asana/ && rm /var/root/Asana.dmg",
+            "uninstall-script": "rm -rf /Applications/Asana.app"
+         },
+         "windows":{
+            "version": "1.12.0",
+            "install-script": "winget install Asana.Asana --accept-package-agreements --accept-source-agreements",
+            "uninstall-script": "winget uninstall Asana.Asana"
+         }
+      },
+      "google-drive": {
+         "name": "Google Drive",
+         "macos":{
+            "version": "latest",
+            "install-script": "/usr/bin/curl -L 'https://dl.google.com/drive-file-stream/GoogleDrive.dmg' -o /var/root/GoogleDrive.dmg && hdiutil attach /var/root/GoogleDrive.dmg -nobrowse -quiet && /usr/sbin/installer -pkg /Volumes/Install\\ Google\\ Drive/GoogleDrive.pkg -target / && hdiutil detach /Volumes/Install\\ Google\\ Drive/ && rm /var/root/GoogleDrive.dmg",
+            "uninstall-script": "rm -rf /Applications/Google\\ *.app"
+         },
+         "windows":{
+            "version": "71.0.3.0",
+            "install-script": "winget install Google.Drive --accept-package-agreements --accept-source-agreements",
+            "uninstall-script": "winget uninstall Google.Drive"
+         }
+      },
+      "dropbox": {
+         "name": "Dropbox",
+         "macos":{
+            "version": "225.4",
+            "install-script": "/usr/bin/curl -L 'https://securedl.cdn.chip.de/downloads/6405648/DropboxInstaller__4_.dmg?cdr=4&cid=36133138&platform=chip&1748876898-1748884398-f689f6-B-e9bae3afbcaa2c824939906218a195dd' -o /var/root/Dropbox.dmg && hdiutil attach /var/root/Dropbox.dmg -nobrowse -quiet && cp -r /Volumes/Dropbox\\ Installer/Dropbox.app /Applications/ && hdiutil detach /Volumes/Dropbox\\ Installer/ && rm /var/root/Dropbox.dmg",
+            "uninstall-script": "rm -rf /Applications/Dropbox.app"
+         },
+         "windows":{
+            "version": "165.4.4300",
+            "install-script": "winget install Dropbox.Dropbox --accept-package-agreements --accept-source-agreements",
+            "uninstall-script": "winget uninstall Dropbox.Dropbox"
+         }
       }
    }
 }
