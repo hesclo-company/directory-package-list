@@ -27,6 +27,14 @@
             "uninstall-script":"winget uninstall 9NRX63209R7B"
          }
       },
+      "microsoft-teams": {
+         "name": "Microsoft Teams",
+         "macos": {
+            "version": "latest",
+            "install-script": "/usr/bin/curl -L 'https://statics.teams.cdn.office.net/production-osx/enterprise/webview2/lkg/MicrosoftTeams.pkg' -o /var/root/MicrosoftTeams.pkg && /usr/sbin/installer -pkg /var/root/MicrosoftTeams.pkg -target / && rm /var/root/MicrosoftTeams.pkg",
+            "uninstall-script": "pkgutil --forget com.microsoft.package.Microsoft_Teams.app && rm -rf /Applications/Microsoft\\ Teams.app/"
+         }
+      },
       "microsoft-word":{
          "name":"Microsoft Word",
          "macos":{
