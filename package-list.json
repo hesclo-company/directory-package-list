@@ -310,6 +310,19 @@
             "install-script": "winget install Dropbox.Dropbox --accept-package-agreements --accept-source-agreements",
             "uninstall-script": "winget uninstall Dropbox.Dropbox"
          }
+      },
+      "royal-ts": {
+         "name": "Royal TS(X)",
+         "windows": {
+            "version": "6.1.60303.0",
+            "install-script": "winget install RoyalApps.RoyalTS --accept-package-agreements --accept-source-agreements",
+            "uninstall-script": "winget uninstall RoyalApps.RoyalTS"
+         },
+         "macos": {
+            "version": "6.2.1",
+            "install-script": "/usr/bin/curl -L 'https://royaltsx-v6.royalapps.com/updates/royaltsx_6.2.1.1000.dmg' -o /var/root/royaltsx_6.2.1.1000 && hdiutil attach /var/root/royaltsx_6.2.1.1000.dmg -nobrowse -quiet && cp -r /Volumes/Royal\\ TSX/Royal \\TSX.app /Applications/ && hdiutil detach /Volumes/Royal \\TSX/ && rm /var/root/royaltsx_6.2.1.1000.dmg",
+            "uninstall-script": "rm -rf /Applications/Royal \\TSX.app"
+         }
       }
    }
 }
